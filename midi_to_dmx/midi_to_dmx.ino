@@ -4,7 +4,7 @@
 
 // Define this to print out state to serial.  Useful for debugging.
 // Leave this off in production.  This ONLY WORKS ON THE PRO MINI.
-#define PRINT_STATE
+// #define PRINT_STATE
 
 #include <EEPROM.h>
 
