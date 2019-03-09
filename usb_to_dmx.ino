@@ -4,13 +4,13 @@
 
 // Define this to print out state to serial.  Useful for debugging.
 // Leave this off in production.  This ONLY WORKS ON THE PRO MINI.
-//#define PRINT_STATE
+#define PRINT_STATE
 
 #include <EEPROM.h>
 
 // REQUIRES LIBRARY:
 // https://github.com/TinkerKit/DmxMaster
-#include <DmxMaster.h>
+#include <DmxSimple.h>
 
 #ifdef USE_USB_MIDI
 // REQUIRES LIBRARY:
@@ -210,7 +210,7 @@ midi_command get_midi_command() {
   if (command == MIDI_NOTE_ON) {
     ret.command = COMMAND_SCENE;
   } else if (command == MIDI_NOTE_OFF) {
-    ret.command = COMMAND_FIXTURE;
+    //ret.command = COMMAND_FIXTURE;
   } else if (command == MIDI_CONTROL_CHANGE) {
     ret.command = COMMAND_CHANNEL;
   } else {
@@ -258,7 +258,7 @@ midi_command get_midi_command() {
   if (command == MIDI_NOTE_ON) {
     ret.command = COMMAND_SCENE;
   } else if (command == MIDI_NOTE_OFF) {
-    ret.command = COMMAND_FIXTURE;
+    //ret.command = COMMAND_FIXTURE;
   } else if (command == MIDI_CONTROL_CHANGE) {
     ret.command = COMMAND_CHANNEL;
   } else {
@@ -423,7 +423,7 @@ void run_fader() {
     
     // Write out the full target value and copy it into the start array.
     for (byte i = 0; i < MAX_DMX_CHANNELS; i++) {
-      DmxMaster.write(i, fade_target_values[i]);
+      DmxSimple.write(i, fade_target_values[i]);
       fade_start_values[i] = fade_target_values[i];
     }
     
@@ -467,7 +467,7 @@ void run_fader() {
     // Apply the offset to the old value to get the midpoint channel value.
     value = old_value + temp;
     
-    DmxMaster.write(i, value);
+    DmxSimple.write(i, value);
   }
 }
 
@@ -505,7 +505,7 @@ void setup() {
   // All the buffers hold the proper values now.  Start the DMX output.
   // Any of the DmxMaster commands will start output, and this code supports
   // up to 128 channels, so transmit all of them.
-  DmxMaster.maxChannel(128);
+  DmxSimple.maxChannel(128);
 }
 
 /**

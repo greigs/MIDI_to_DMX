@@ -17,7 +17,7 @@
 #define FIXTURE_WHITE 0x20
 
 // As MIDI channels are used to select fixtures, only 16 fixtures are allowed.
-#define MAX_FIXTURE_COUNT 16
+#define MAX_FIXTURE_COUNT 1
 
 /**
  * RGB colors.  This array is a list of RGB colors that can be selected for each
@@ -76,20 +76,5 @@ typedef struct {
  */
 
 const PROGMEM fixture_data fixtures[MAX_FIXTURE_COUNT] = {
-  {FIXTURE_RGB,      1}, //  1: Wash lights
-  {FIXTURE_RGB,     66}, //  2: Stage Side Bars
-  {FIXTURE_RGB,      8}, //  3: Stage Center Bars
-  {FIXTURE_WHITE,    4}, //  4: Spots
-  {FIXTURE_WHITE,    6}, //  5: Audience Overhead
-  {FIXTURE_RGB,     34}, //  6: Stage Lights (TEST)
-  {FIXTURE_UNUSED,   0}, //  7: Unused
-  {FIXTURE_UNUSED,   0}, //  8: Unused
-  {FIXTURE_UNUSED,   0}, //  9: Unused
-  {FIXTURE_UNUSED,   0}, // 10: Unused
-  {FIXTURE_UNUSED,   0}, // 11: Unused
-  {FIXTURE_UNUSED,   0}, // 12: Unused
-  {FIXTURE_UNUSED,   0}, // 13: Unused
-  {FIXTURE_UNUSED,   0}, // 14: Unused
-  {FIXTURE_UNUSED,   0}, // 15: Unused
-  {FIXTURE_UNUSED,   0}, // 16: Unused
-};
+  {FIXTURE_RGB,      80}, //  required
+  };
