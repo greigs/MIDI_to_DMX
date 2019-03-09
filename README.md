@@ -1,5 +1,5 @@
 # MIDI_to_DMX
-An Arduino sketch to convert Proclaim's MIDI output to lighting DMX.
+An Arduino sketch to convert USB MIDI output to DMX lighting. Original code by Syonyk.
 
 Modified to drive 4 cheap RGB lights with various scenes.
 
