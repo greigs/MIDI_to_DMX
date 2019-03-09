@@ -21,8 +21,8 @@ typedef struct {
 const PROGMEM fixed_channel fixed_channels[] = {
   //{32, 255}, // Channel 32 - RGB LED mode // TEST TEST TEST
   //{33, 255}, // Channel 33 - RGB brightness // TEST TEST TEST
-  {64, 255}, // Channel 64 - RGB LED mode
-  {65, 255}, // Channel 65 - RGB brightness
+  //{6, 1}, // Channel 64 - RGB LED mode
+  //{7, 255}, // Channel 65 - RGB brightness
 };
 
 #define NUMBER_OF_FIXED_CHANNELS (sizeof(fixed_channels) /                     \

@@ -49,7 +49,7 @@
 #define COMMAND_FIXTURE 0x2
 #define COMMAND_CHANNEL 0x3
 
-#define MS_PER_SECOND 1000
+#define MS_PER_SECOND 100
 
 /*
  * Dim a given value to a given percent (0-100).
